@@ -13,7 +13,7 @@ unit_tests:
     - pip install -r requirements.txt
     - python manage.py test
   artifacts:
-    when: manual
+    when: always
     paths:
       - junit.xml
     reports:
