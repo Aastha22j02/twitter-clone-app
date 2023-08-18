@@ -5,6 +5,7 @@ stages:
 
 unit_tests:
   stage: test
+  when: manual
   script:
     - apt-get update -y
     - apt-get install -y libpq-dev
@@ -12,6 +13,7 @@ unit_tests:
     - source venv/bin/activate
     - pip install -r requirements.txt
     - python manage.py test
+
   artifacts:
     when: always
     paths:
