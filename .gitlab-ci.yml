@@ -5,6 +5,8 @@ stages:
 
 unit_tests:
   stage: test
+  tags:
+    - docker
   when: manual
   script:
     - apt-get update -y
