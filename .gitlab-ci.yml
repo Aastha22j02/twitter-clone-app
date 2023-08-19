@@ -1,8 +1,6 @@
 stages:
   - test
 
- 
-
 unit_tests:
   stage: test
   tags:
