@@ -1,40 +1,23 @@
-# stages:
-#   - test
-
-# unit_tests:
-#   stage: test
-#   tags:
-#     - shell
-#   when: manual
-#   script:
-#     - ls
-#     # - sudo apt-get update -y
-#     # - sudo apt-get install -y libpq-dev
-#     # - sudo cd /home/ubuntu/twitter-clone-myApp
-#     # - sudo source source env-twitter/bin/activate
-#     # - sudo pip install -r requirements.txt
-#     # - sudo python3 manage.py test/
-
-#   artifacts:
-#     when: always
-#     paths:
-#       - junit.xml
-#     reports:
-#       junit: junit.xml
-
-image: python:3.8
-
 stages:
   - test
 
-before_script:
-  - python -m pip install --upgrade pip
-  - pip install -r requirements.txt
-
-test:
+unit_tests:
   stage: test
   tags:
     - shell
-  when: manual  
+  when: manual
   script:
-    - python manage.py test
+    - ls
+    # - sudo apt-get update -y
+    # - sudo apt-get install -y libpq-dev
+    # - sudo cd /home/ubuntu/twitter-clone-myApp
+    # - sudo source source env-twitter/bin/activate
+    # - sudo pip install -r requirements.txt
+    # - sudo python3 manage.py test/
+
+  artifacts:
+    when: always
+    paths:
+      - junit.xml
+    reports:
+      junit: junit.xml
