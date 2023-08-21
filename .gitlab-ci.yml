@@ -13,9 +13,8 @@ unit_tests:
     # - sudo cd /home/ubuntu/twitter-clone-myApp
     - source env-twitter/bin/activate
     - pip install -r requirements.txt
-    - bundle install
-    - bundle exec rspec --format progress --format RspecJunitFormatter --out junit.xml
-    - python3 manage.py test
+   
+    - python3 manage.py test --out junit.xml
     # - source env-twitter/bin/deactivate
 
   artifacts:
