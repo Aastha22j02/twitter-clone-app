@@ -14,6 +14,7 @@ unit_tests:
     - sudo source env-twitter/bin/activate
     - sudo pip install -r requirements.txt
     - sudo python3 manage.py test
+    - sudo source env-twitter/bin/deactivate
 
   artifacts:
     when: always
